@@ -27,7 +27,7 @@ function MyFavouriteVillains($scope, villainsService) {
     villainsService.getVillains().then(function(villains) {
       $scope.villains = villains;
     });
-  this.isFavourite = function(villain) {
+  $scope.isFavourite = function(villain) {
     return villainsService.isFavourite(villain);
   };
 }
