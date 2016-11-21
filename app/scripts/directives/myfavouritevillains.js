@@ -23,11 +23,10 @@ angular.module('yeomanTestApp')
   });
 function MyFavouriteVillains($scope, villainsService) {
   
-    var _this = this;
-    villainsService.getVillains().then(function(villains) {
-      $scope.villains = villains;
-    });
-  this.isFavourite = function(villain) {
+  villainsService.getVillains().then(function(villains) {
+    $scope.villains = villains;
+  });
+  $scope.isFavourite = function(villain) {
     return villainsService.isFavourite(villain);
   };
 }
